@@ -5,7 +5,7 @@
 # alongside with the add_header methods that adds each operator
 # to the layout.  
 #----------------------------------------------------------------------
-# File generated on 2017-12-21 23:30:02
+# File generated on 2017-12-26 00:13:16
 #----------------------------------------------------------------------
 
 import bpy
@@ -23,6 +23,7 @@ try:
     from console_scripts.utils import console_writer
     console_script_is_installed=True
 except ImportError:
+    print("console_scripts addon wasn't found, ensure correct name of the addon if it's registered!")
     console_script_is_installed=False
 
 def custom_print(str):
@@ -30,7 +31,7 @@ def custom_print(str):
         # the exposed Blender operator
         bpy.ops.console.console_write_operator(myString=str)
         # the python method
-        console_writer.console_write(str)
+        # console_writer.console_write(str)
     else:
         print(str)
 
@@ -42,7 +43,7 @@ class PrintHello_VIEW_3D(Operator):
     bl_label = "Print Hello from VIEW_3D"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -51,7 +52,7 @@ class PrintHello_TIMELINE(Operator):
     bl_label = "Print Hello from TIMELINE"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -60,7 +61,7 @@ class PrintHello_GRAPH_EDITOR(Operator):
     bl_label = "Print Hello from GRAPH_EDITOR"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -69,7 +70,7 @@ class PrintHello_DOPESHEET_EDITOR(Operator):
     bl_label = "Print Hello from DOPESHEET_EDITOR"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -78,7 +79,7 @@ class PrintHello_NLA_EDITOR(Operator):
     bl_label = "Print Hello from NLA_EDITOR"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -87,7 +88,7 @@ class PrintHello_IMAGE_EDITOR(Operator):
     bl_label = "Print Hello from IMAGE_EDITOR"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -96,7 +97,7 @@ class PrintHello_SEQUENCE_EDITOR(Operator):
     bl_label = "Print Hello from SEQUENCE_EDITOR"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -105,7 +106,7 @@ class PrintHello_CLIP_EDITOR(Operator):
     bl_label = "Print Hello from CLIP_EDITOR"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -114,7 +115,7 @@ class PrintHello_TEXT_EDITOR(Operator):
     bl_label = "Print Hello from TEXT_EDITOR"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -123,7 +124,7 @@ class PrintHello_NODE_EDITOR(Operator):
     bl_label = "Print Hello from NODE_EDITOR"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -132,7 +133,7 @@ class PrintHello_LOGIC_EDITOR(Operator):
     bl_label = "Print Hello from LOGIC_EDITOR"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -141,7 +142,7 @@ class PrintHello_PROPERTIES(Operator):
     bl_label = "Print Hello from PROPERTIES"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -150,7 +151,7 @@ class PrintHello_OUTLINER(Operator):
     bl_label = "Print Hello from OUTLINER"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -159,7 +160,7 @@ class PrintHello_USER_PREFERENCES(Operator):
     bl_label = "Print Hello from USER_PREFERENCES"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -168,7 +169,7 @@ class PrintHello_INFO(Operator):
     bl_label = "Print Hello from INFO"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -177,7 +178,7 @@ class PrintHello_FILE_BROWSER(Operator):
     bl_label = "Print Hello from FILE_BROWSER"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -186,7 +187,7 @@ class PrintHello_CONSOLE(Operator):
     bl_label = "Print Hello from CONSOLE"
 
     def execute(self, context):
-        custom_print(GetSpace(context) + "." + "HEADER")
+        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 def GetSpaceAndRegion(context):
@@ -198,11 +199,6 @@ def GetSpace(context):
 # the context will return the default region rather than the region of the object, which we'll need to always overwrite ourselves except when working with the properties editor, as the "window" region will be the default & only-useable region.
 def GetRegion(context):
     return context.region.type
-
-# TODO: consider existence of this preview!
-preview_collections = {}
-import bpy.utils.previews
-
 
 # PrintHello operator per space
 def add_to_header_1(self, context):
