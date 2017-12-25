@@ -5,7 +5,7 @@
 # alongside with the add_header methods that adds each operator
 # to the layout.  
 #----------------------------------------------------------------------
-# File generated on 2017-12-26 00:17:36
+# File generated on 2017-12-26 00:29:13
 #----------------------------------------------------------------------
 
 import bpy
@@ -27,11 +27,15 @@ except ImportError:
     console_script_is_installed=False
 
 def custom_print(str):
-    if console_script_is_installed==True:
+    if "console_write_operator" in dir(bpy.ops.console)
         # the exposed Blender operator
+        # case of console_scripts registered
         bpy.ops.console.console_write_operator(myString=str)
+    elif console_script_is_installed==True:
         # the python method
-        # console_writer.console_write(str)
+        # case of console_scripts existent but not registered
+        # or console_scripts has just been removed
+        console_writer.console_write(str)
     else:
         print(str)
 
@@ -191,7 +195,7 @@ class PrintHello_CONSOLE(Operator):
         return {'FINISHED'}
 
 def GetSpaceAndRegion(context):
-    return GetSpace(context) + "." + GetRegion(context)
+    return "{space: " + GetSpace(context) + ", region: " + GetRegion(context) + "}"
 
 def GetSpace(context):
     return context.space_data.type
