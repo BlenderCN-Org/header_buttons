@@ -5,7 +5,7 @@
 # alongside with the add_header methods that adds each operator
 # to the layout.  
 #----------------------------------------------------------------------
-# File generated on 2017-12-26 00:13:16
+# File generated on 2017-12-26 00:17:36
 #----------------------------------------------------------------------
 
 import bpy
@@ -43,7 +43,7 @@ class PrintHello_VIEW_3D(Operator):
     bl_label = "Print Hello from VIEW_3D"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -52,7 +52,7 @@ class PrintHello_TIMELINE(Operator):
     bl_label = "Print Hello from TIMELINE"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -61,7 +61,7 @@ class PrintHello_GRAPH_EDITOR(Operator):
     bl_label = "Print Hello from GRAPH_EDITOR"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -70,7 +70,7 @@ class PrintHello_DOPESHEET_EDITOR(Operator):
     bl_label = "Print Hello from DOPESHEET_EDITOR"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -79,7 +79,7 @@ class PrintHello_NLA_EDITOR(Operator):
     bl_label = "Print Hello from NLA_EDITOR"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -88,7 +88,7 @@ class PrintHello_IMAGE_EDITOR(Operator):
     bl_label = "Print Hello from IMAGE_EDITOR"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -97,7 +97,7 @@ class PrintHello_SEQUENCE_EDITOR(Operator):
     bl_label = "Print Hello from SEQUENCE_EDITOR"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -106,7 +106,7 @@ class PrintHello_CLIP_EDITOR(Operator):
     bl_label = "Print Hello from CLIP_EDITOR"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -115,7 +115,7 @@ class PrintHello_TEXT_EDITOR(Operator):
     bl_label = "Print Hello from TEXT_EDITOR"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -124,7 +124,7 @@ class PrintHello_NODE_EDITOR(Operator):
     bl_label = "Print Hello from NODE_EDITOR"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -133,7 +133,7 @@ class PrintHello_LOGIC_EDITOR(Operator):
     bl_label = "Print Hello from LOGIC_EDITOR"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -142,7 +142,7 @@ class PrintHello_PROPERTIES(Operator):
     bl_label = "Print Hello from PROPERTIES"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -151,7 +151,7 @@ class PrintHello_OUTLINER(Operator):
     bl_label = "Print Hello from OUTLINER"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -160,7 +160,7 @@ class PrintHello_USER_PREFERENCES(Operator):
     bl_label = "Print Hello from USER_PREFERENCES"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -169,7 +169,7 @@ class PrintHello_INFO(Operator):
     bl_label = "Print Hello from INFO"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -178,7 +178,7 @@ class PrintHello_FILE_BROWSER(Operator):
     bl_label = "Print Hello from FILE_BROWSER"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 
@@ -187,7 +187,7 @@ class PrintHello_CONSOLE(Operator):
     bl_label = "Print Hello from CONSOLE"
 
     def execute(self, context):
-        custom_print("{space: "GetSpace(context) + ", region: HEADER}")
+        custom_print("{space: " + GetSpace(context) + ", region: HEADER}")
         return {'FINISHED'}
 
 def GetSpaceAndRegion(context):

@@ -29,10 +29,10 @@ if "bpy" in locals():
 
 else:
     # Imported multifiles
-    from . import header_buttons
+    from .src import header_buttons
 
 import bpy
-from . import header_buttons_registration
+from .src import header_buttons_registration
 
 #
 #  Registration
